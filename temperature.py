@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 from influxdb import InfluxDBClient
 import socket
-client = InfluxDBClient('s-scic-stats2.scic.cec.eu.int',8086,'el-usb-rt','J7kzURCakrEJaAVs','el-usb-rt', timeout=None)
+client = InfluxDBClient('hostname',8086,'el-usb-rt','password','el-usb-rt', timeout=None)
 
 current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 hostname = socket.gethostname()
