@@ -1,0 +1,12 @@
+[Unit]
+Description=Temperature monitoring
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /usr/local/bin/temperature.py
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
